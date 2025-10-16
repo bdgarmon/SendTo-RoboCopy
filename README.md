@@ -1,3 +1,6 @@
+
+<img width="731" height="568" alt="SendTo" src="https://github.com/user-attachments/assets/183702fb-c1ac-4282-ba8c-0bea40e321ff" />
+
 Why Use This?
 -------------------------------
 Windows File Explorer uses the legacy CopyFileEx API for drag-and-drop. That path is single-threaded, uses small buffered I/O, and adds shell overhead like thumbnailing and content indexing. Over SMB to a NAS, this results in many small round-trips and CPU time spent on buffering rather than saturating the link. In contrast, Robocopy can run multiple parallel copy threads, perform large unbuffered reads/writes, resume partially-copied files, and avoid Explorer’s extra processing. The scripts in this toolkit wrap Robocopy to give you a clear progress bar, automatic stall handling, and per-run logs, while the right‑click integration lets you launch fast copies directly from Explorer without manual command lines.
