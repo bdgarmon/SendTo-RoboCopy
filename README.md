@@ -55,9 +55,9 @@ Recommended settings and tips
 Using the progress wrapper (optional)
 -------------------------------------
 • Single file example (fast, unbuffered):  
-  .\Start-RoboCopyWithProgress_v4_2.ps1 -Source "C:\Videos\movie.mkv" -Destination "\\NAS\Share\Movies" -Threads 32 -Unbuffered  
+  .\Start-RoboCopyWithProgress_v4_2.ps1 -Source "C:\MyFiles\MyFile.ISO" -Destination "\\NAS\Share\Movies" -Threads 32 -Unbuffered  
 • Folder example (mixed files, safer closeout):  
-  .\Start-RoboCopyWithProgress_v4_2.ps1 -Source "C:\SEEDS\RAMPAGE" -Destination "\\NAS\Media\RAMPAGE" -IncludeSubdirs -Threads 16 -StallSeconds 15  
+  .\Start-RoboCopyWithProgress_v4_2.ps1 -Source "C:\MyFiles\MyFile\FolderA" -Destination "\\NAS\Share\FolderA" -IncludeSubdirs -Threads 16 -StallSeconds 15  
 The wrapper shows overall % complete, smoothed MB/s, ETA, and writes per-run logs to .\Logs\<timestamp>\
 
 Right-click installer details
