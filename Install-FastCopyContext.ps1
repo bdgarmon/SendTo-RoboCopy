@@ -18,7 +18,11 @@ Copy-Item -LiteralPath $fastCopySrc -Destination $fastCopyDst -Force
 $sendTo = Join-Path $env:APPDATA "Microsoft\Windows\SendTo"
 if (-not (Test-Path -LiteralPath $sendTo)) { New-Item -ItemType Directory -Path $sendTo -Force | Out-Null }
 
-$pwsh = (Get-Command pwsh).Source
+$pwsh = "$env:LOCALAPPDATA\Microsoft\WindowsApps\pwsh.exe"
+
+if (-not (Test-Path -LiteralPath $pwsh)) {
+    throw "PowerShell 7 App Execution Alias was not found at: $pwsh"
+}
 
 # REGULAR shortcut (prompts every time)
 $lnk1 = Join-Path $sendTo "Fast Copy (Robocopy).lnk"
